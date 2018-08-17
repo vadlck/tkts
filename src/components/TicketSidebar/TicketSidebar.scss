@@ -1,0 +1,12 @@
+.ticket-sidebar {
+    background-color: #ffffff;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .15);
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 15px;
+    color: #737373;
+    vertical-align: top;
+    @include MQ(S) {
+        display: inline-block;
+    }
+}

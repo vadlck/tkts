@@ -1,0 +1,28 @@
+$XS: 400px;
+$S: 600px;
+$M: 768px;
+$L: 1000px;
+
+@mixin MQ($size) {
+    @if $size==XS {
+        @media only screen and (min-width: $XS) {
+            @content;
+        }
+    }
+    @else if $size==S {
+        @media only screen and (min-width: $S) {
+            @content;
+        }
+    }
+    @else if $size==M {
+        @media only screen and (min-width: $M) {
+            @content;
+        }
+    }
+    @else if $size==L {
+        @media only screen and (min-width: $L) {
+            @content;
+        }
+    }
+}
+

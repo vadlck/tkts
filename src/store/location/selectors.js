@@ -1,0 +1,1 @@
+export const getLocationPathname = state => state.location.pathname;

@@ -1,0 +1,41 @@
+.currency {
+    h4 {
+        margin-bottom: 15px;
+    }
+    .currency__types {
+        display: table;
+        .currency-types__type {
+            display: table-cell;
+            border: 1px solid #e0e2e3;
+            padding: 10px 15px;
+            border-radius: 9px;
+            cursor: pointer;
+            color: #2196f3;
+            min-width: 65px;
+            text-align: center;
+            &:nth-child(1) {
+                border-bottom-right-radius: 0px;
+                border-top-right-radius: 0px;
+            }
+            &:nth-child(2) {
+                border-radius: 0;
+            }
+            &:nth-child(3) {
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+            }
+            &:hover {
+                background-color: #f2fcff;
+                color: #2196f3;
+            }
+            &.active {
+                background-color: #2196f3;
+                color: white;
+            }
+            &:hover,
+            &.active {
+                border-color: #2196f3;
+            }
+        }
+    }
+}

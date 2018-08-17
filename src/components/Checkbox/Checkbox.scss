@@ -1,0 +1,38 @@
+.checkbox {
+    margin: 7px 0;
+    cursor: pointer;
+    display: inline-block;
+    @include MQ(S) {
+        display: block;
+    }
+    input {
+        display: none;
+    }
+    .checkbox__fake-input {
+        width: 25px;
+        height: 25px;
+        vertical-align: middle;
+        display: inline-block;
+        border-radius: 5px;
+        border: 1px solid #e0e2e3;
+        position: relative;
+    }
+    &.active {
+        .checkbox__fake-input {
+            border-color: #2196f3;
+            &:after {
+                position: absolute;
+                content: 'V';
+                top: 5px;
+                left: 6px;
+                font-family: sans-serif;
+                color: #2196f3;
+            }
+        }
+    }
+    .checkbox-title {
+        vertical-align: middle;
+        display: inline-block;
+        margin-left: 5px;
+    }
+}

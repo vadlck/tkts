@@ -1,0 +1,513 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html,
+body,
+#root,
+#root > * {
+  width: 100%;
+  height: 100%; }
+
+body {
+  background-color: #f3f7fa;
+  font-family: Open Sans, Segoe UI, Verdana, Arial, Tahoma, sans-serif; }
+
+a {
+  text-decoration: none; }
+
+.with-header-layout header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  background-color: #33414a;
+  z-index: 3;
+  top: 0; }
+  .with-header-layout header .fake-logo {
+    position: absolute;
+    border: 2px solid #c9c9ca;
+    text-align: center;
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    left: 0;
+    margin-left: 5%;
+    height: 50px;
+    width: 200px;
+    cursor: pointer; }
+  .with-header-layout header nav {
+    position: absolute;
+    right: 0;
+    margin-right: 5%;
+    top: 50%;
+    transform: translateY(-50%); }
+    .with-header-layout header nav li {
+      display: inline-block;
+      margin-left: 15px;
+      cursor: pointer; }
+      .with-header-layout header nav li:hover {
+        background-color: #485c68; }
+      .with-header-layout header nav li a {
+        color: white;
+        font-size: 20px;
+        padding: 30px;
+        text-decoration: none;
+        display: block; }
+
+.with-header-layout main {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-top: 100px; }
+
+.main-layout main {
+  width: 100%;
+  height: 100%; }
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.ticket-sidebar {
+  background-color: #ffffff;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 15px;
+  color: #737373;
+  vertical-align: top; }
+  @media only screen and (min-width: 600px) {
+    .ticket-sidebar {
+      display: inline-block; } }
+
+.checkbox {
+  margin: 7px 0;
+  cursor: pointer;
+  display: inline-block; }
+  @media only screen and (min-width: 600px) {
+    .checkbox {
+      display: block; } }
+  .checkbox input {
+    display: none; }
+  .checkbox .checkbox__fake-input {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid #e0e2e3;
+    position: relative; }
+  .checkbox.active .checkbox__fake-input {
+    border-color: #2196f3; }
+    .checkbox.active .checkbox__fake-input:after {
+      position: absolute;
+      content: 'V';
+      top: 5px;
+      left: 6px;
+      font-family: sans-serif;
+      color: #2196f3; }
+  .checkbox .checkbox-title {
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 5px; }
+
+.ticket {
+  background-color: #ffffff;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  margin-bottom: 25px;
+  width: 100%;
+  position: relative; }
+  .ticket .ticket-buy-info {
+    padding: 15px;
+    min-width: 150px; }
+    .ticket .ticket-buy-info .ticket-buy-info__carrier {
+      font-size: 30px;
+      text-align: center;
+      margin: 0 10px;
+      color: #2c3882;
+      display: inline-block; }
+    .ticket .ticket-buy-info .ticket-buy-info__price {
+      text-align: center;
+      float: right; }
+      .ticket .ticket-buy-info .ticket-buy-info__price button {
+        background-color: #ff6d00;
+        padding: 5px 25px 6px;
+        border-radius: 9px;
+        color: white;
+        border-width: 1px;
+        outline: none;
+        border-color: #ff6d00;
+        cursor: pointer;
+        width: 100%;
+        font-family: inherit;
+        max-width: 120px; }
+        .ticket .ticket-buy-info .ticket-buy-info__price button:active, .ticket .ticket-buy-info .ticket-buy-info__price button:focus {
+          outline: none; }
+    @media only screen and (min-width: 768px) {
+      .ticket .ticket-buy-info {
+        display: inline-block;
+        border-right: 1px solid #e0e2e3; }
+        .ticket .ticket-buy-info .ticket-buy-info__carrier {
+          display: block;
+          margin: 10px 0; }
+        .ticket .ticket-buy-info .ticket-buy-info__price {
+          float: none; } }
+  .ticket .ticket-main-info {
+    height: 100%;
+    right: 0;
+    top: 0;
+    padding: 20px 5px; }
+    .ticket .ticket-main-info .ticket-main-info__departure,
+    .ticket .ticket-main-info .ticket-main-info__arrival {
+      width: 130px;
+      display: inline-block;
+      text-align: center; }
+      .ticket .ticket-main-info .ticket-main-info__departure h3,
+      .ticket .ticket-main-info .ticket-main-info__arrival h3 {
+        display: inline-block;
+        font-size: 24px;
+        width: 75px; }
+    .ticket .ticket-main-info .ticket-main-info__stops-count {
+      width: 95%;
+      max-width: calc(100% - 260px);
+      display: inline-block;
+      position: relative;
+      height: 10px;
+      border-top: 1px solid #e0e2e3; }
+      .ticket .ticket-main-info .ticket-main-info__stops-count .line__stops-count {
+        position: absolute;
+        top: -15px;
+        font-size: 11px;
+        display: none; }
+    @media only screen and (min-width: 400px) {
+      .ticket .ticket-main-info .ticket-main-info__stops-count .line__stops-count {
+        display: inline-block; } }
+    @media only screen and (min-width: 768px) {
+      .ticket .ticket-main-info {
+        width: calc(100% - 145px);
+        position: absolute;
+        padding: 35px 5px; }
+        .ticket .ticket-main-info .ticket-main-info__arrival h3 {
+          font-size: 30px; } }
+
+.ticket-list {
+  padding: 0 0 0 25px;
+  width: calc(100% - 25px);
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px; }
+  @media only screen and (min-width: 600px) {
+    .ticket-list {
+      width: calc(100% - 240px);
+      margin-top: 0; } }
+
+.currency h4 {
+  margin-bottom: 15px; }
+
+.currency .currency__types {
+  display: table; }
+  .currency .currency__types .currency-types__type {
+    display: table-cell;
+    border: 1px solid #e0e2e3;
+    padding: 10px 15px;
+    border-radius: 9px;
+    cursor: pointer;
+    color: #2196f3;
+    min-width: 65px;
+    text-align: center; }
+    .currency .currency__types .currency-types__type:nth-child(1) {
+      border-bottom-right-radius: 0px;
+      border-top-right-radius: 0px; }
+    .currency .currency__types .currency-types__type:nth-child(2) {
+      border-radius: 0; }
+    .currency .currency__types .currency-types__type:nth-child(3) {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px; }
+    .currency .currency__types .currency-types__type:hover {
+      background-color: #f2fcff;
+      color: #2196f3; }
+    .currency .currency__types .currency-types__type.active {
+      background-color: #2196f3;
+      color: white; }
+    .currency .currency__types .currency-types__type:hover, .currency .currency__types .currency-types__type.active {
+      border-color: #2196f3; }
+
+.stop {
+  margin-top: 20px; }
+  .stop h4 {
+    font-size: 15px;
+    margin: 30px 0px 15px; }
+
+.signin-container {
+  max-width: 450px;
+  width: 95%;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px; }
+  .signin-container .signin__switcher li {
+    display: inline-block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 50%;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    background-color: #d2d8d8; }
+    .signin-container .signin__switcher li.active {
+      background-color: white; }
+  .signin-container .signin__selected-block button {
+    padding: 22px 6px;
+    cursor: pointer;
+    background: #2f889a;
+    color: #fff;
+    font-weight: 700;
+    border: 0;
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; }
+    .signin-container .signin__selected-block button[disabled] {
+      cursor: not-allowed;
+      opacity: .5; }
+  .signin-container form {
+    padding: 15px; }
+    .signin-container form .field {
+      width: 100%;
+      margin: 15px 0; }
+      .signin-container form .field input,
+      .signin-container form .field input:focus,
+      .signin-container form .field input:active {
+        border-radius: 5px; }
+      .signin-container form .field input {
+        width: 100%;
+        border: 1px solid #d2d8d8;
+        padding: 16px 20px 16px 50px;
+        border-radius: 5px; }
+      .signin-container form .field input:focus,
+      .signin-container form .field input:active {
+        border-radius: 5px;
+        border-color: #343642;
+        box-shadow: 0 0 5px rgba(52, 54, 66, 0.1);
+        outline: none; }
+
+.authorized-user-menu {
+  cursor: pointer;
+  color: white;
+  overflow: hidden;
+  position: absolute;
+  right: 5%;
+  height: 100%;
+  max-width: 160px;
+  width: 100%; }
+  .authorized-user-menu .authorized-user-menu__user-login {
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 15px; }
+    .authorized-user-menu .authorized-user-menu__user-login:after {
+      position: absolute;
+      content: '';
+      height: 16px;
+      width: 16px;
+      right: -16px;
+      top: 2px;
+      background: url(/img/cd-arrow.svg); }
+    .authorized-user-menu .authorized-user-menu__user-login span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 150px;
+      width: 100%;
+      display: block;
+      text-align: right; }
+  .authorized-user-menu .authorized-user-menu__items {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    top: 100%;
+    right: 0;
+    border: 1px solid #33414a8c;
+    max-width: 150px; }
+    .authorized-user-menu .authorized-user-menu__items li {
+      background-color: white;
+      color: black; }
+      .authorized-user-menu .authorized-user-menu__items li a {
+        padding: 13px;
+        display: block; }
+        .authorized-user-menu .authorized-user-menu__items li a:hover {
+          background-color: #33414a;
+          color: white; }
+  .authorized-user-menu.authorized-user-menu--is-open {
+    overflow: visible; }
+    .authorized-user-menu.authorized-user-menu--is-open .authorized-user-menu__user-login:after {
+      transform: rotate(180deg); }
+
+.spinner {
+  position: absolute;
+  display: none;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%; }
+  .spinner.spinner--is-shown {
+    display: block; }
+    .spinner.spinner--is-shown ~ * {
+      display: none; }
+  .spinner:after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #cef;
+    border-color: #cef transparent #cef transparent;
+    animation: spinner-animation 1.2s linear infinite; }
+
+@keyframes spinner-animation {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.new-session-page,
+.loading-page {
+  width: 100%;
+  height: 100%;
+  background-color: #484a55;
+  position: relative; }
+

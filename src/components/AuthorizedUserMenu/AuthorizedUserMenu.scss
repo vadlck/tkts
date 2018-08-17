@@ -1,0 +1,60 @@
+.authorized-user-menu {
+    cursor: pointer;
+    color: white;
+    overflow: hidden;
+    position: absolute;
+    right: 5%;
+    height: 100%;
+    max-width: 160px;
+    width: 100%;
+    .authorized-user-menu__user-login {
+        position: absolute;
+        @include center(y);
+        right: 15px;
+        &:after {
+            position: absolute;
+            content: '';
+            height: 16px;
+            width: 16px;
+			right: -16px;
+			top: 2px;
+            background: url(/img/cd-arrow.svg);
+        }
+        span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 150px;
+            width: 100%;
+            display: block;
+            text-align: right;
+        }
+    }
+    .authorized-user-menu__items {
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        top: 100%;
+        right: 0;
+        border: 1px solid #33414a8c;
+        max-width: 150px;
+        li {
+            a {
+                padding: 13px;
+                display: block;
+                &:hover {
+                    background-color: #33414a;
+                    color: white;
+                }
+            }
+            background-color: white;
+            color: black;
+        }
+    }
+    &.authorized-user-menu--is-open {
+        overflow: visible;
+        .authorized-user-menu__user-login:after {
+            transform: rotate(180deg);
+        }
+    }
+}

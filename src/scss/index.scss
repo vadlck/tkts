@@ -1,0 +1,24 @@
+@import './reset-default-styles';
+@import './media-query-layout';
+@import './mixins';
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+#root>* {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #f3f7fa;
+    font-family: Open Sans, Segoe UI, Verdana, Arial, Tahoma, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}

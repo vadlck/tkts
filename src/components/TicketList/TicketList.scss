@@ -1,0 +1,11 @@
+.ticket-list {
+    padding: 0 0 0 25px;
+    width: calc(100% - 25px);
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    @include MQ(S) {
+        width: calc(100% - 240px);
+        margin-top: 0;
+    }
+}

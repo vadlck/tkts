@@ -1,0 +1,1 @@
+export const getActiveCurrencyType = state => state.activeCurrencyType;

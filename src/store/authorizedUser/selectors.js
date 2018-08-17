@@ -1,0 +1,1 @@
+export const getAuthorizedUser = state => state.authorizedUser

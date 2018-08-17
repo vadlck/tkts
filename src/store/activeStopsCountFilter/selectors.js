@@ -1,0 +1,1 @@
+export const getActiveStopsCountFilter = state => state.activeStopsCountFilter;

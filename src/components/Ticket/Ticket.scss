@@ -1,0 +1,99 @@
+.ticket {
+    background-color: #ffffff;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .15);
+    border-radius: 5px;
+    margin-bottom: 25px;
+    width: 100%;
+    position: relative;
+    .ticket-buy-info {
+        padding: 15px;
+        min-width: 150px;
+        .ticket-buy-info__carrier {
+            font-size: 30px;
+            text-align: center;
+            margin: 0 10px;
+            color: #2c3882;
+            display: inline-block;
+        }
+        .ticket-buy-info__price {
+            text-align: center;
+            float: right;
+            button {
+                background-color: #ff6d00;
+                padding: 5px 25px 6px;
+                border-radius: 9px;
+                color: white;
+                border-width: 1px;
+                outline: none;
+                border-color: #ff6d00;
+                cursor: pointer;
+                width: 100%;
+                font-family: inherit;
+                max-width: 120px;
+                &:active,
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+        @include MQ(M) {
+            display: inline-block;
+            border-right: 1px solid #e0e2e3;
+            .ticket-buy-info__carrier {
+                display: block;
+                margin: 10px 0;
+            }
+            .ticket-buy-info__price {
+                float: none;
+            }
+        }
+    }
+    .ticket-main-info {
+        height: 100%;
+        right: 0;
+        top: 0;
+        padding: 20px 5px;
+        .ticket-main-info__departure,
+        .ticket-main-info__arrival {
+            width: 130px;
+            display: inline-block;
+            text-align: center;
+            h3 {
+                display: inline-block;
+                font-size: 24px;
+                width: 75px;
+            }
+        }
+        .ticket-main-info__stops-count {
+            width: 95%;
+            max-width: calc(100% - 260px);
+            display: inline-block;
+            position: relative;
+            height: 10px;
+            border-top: 1px solid #e0e2e3;
+            .line__stops-count {
+                position: absolute;
+                top: -15px;
+                font-size: 11px;
+                display: none;
+            }
+        }
+        @include MQ(XS) {
+            .ticket-main-info__stops-count {
+                .line__stops-count {
+                    display: inline-block;
+                }
+            }
+        }
+        @include MQ(M) {
+            width: calc(100% - 145px);
+            position: absolute;
+            padding: 35px 5px;
+            .ticket-main-info__arrival {
+                h3 {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
